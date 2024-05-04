@@ -5,18 +5,15 @@ class Solution:
         result = 0
         people.sort(reverse=True)
         while l <= r:
-            if people[l] == limit:
-                result += 1
-                l += 1
-            elif people[l] < limit:
-                if people[l] + people[r] == limit:
-                    result += 1
-                    l += 1
-                    r -= 1
-                elif people[l] + people[r] < limit:
-                    result += 1
-                    l += 1
-                    r -= 1
+            if people[l] <= limit: 
+                if people[l] < limit:
+                    if people[l] + people[r] <= limit:
+                        result += 1
+                        l += 1
+                        r -= 1
+                    else:
+                        result += 1
+                        l += 1
                 else:
                     result += 1
                     l += 1
