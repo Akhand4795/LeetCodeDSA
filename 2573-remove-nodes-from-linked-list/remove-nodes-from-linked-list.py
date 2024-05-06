@@ -13,10 +13,8 @@ class Solution:
             head = head.next
         result = ListNode(0)
         temp = result
-        i = 0
-        while i < len(stack):
-            temp.next = ListNode(stack[i])
-            i += 1
+        for i in stack:
+            temp.next = ListNode(i)
             temp = temp.next
         return result.next
     
