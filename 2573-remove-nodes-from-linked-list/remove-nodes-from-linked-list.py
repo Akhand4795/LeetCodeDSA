@@ -11,7 +11,6 @@ class Solution:
                 stack.pop()
             stack.append(head.val)
             head = head.next
-        print(stack)
         result = ListNode(0)
         temp = result
         i = 0
